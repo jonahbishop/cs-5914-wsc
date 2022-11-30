@@ -18,7 +18,7 @@ The profile leverages CloudLabs image-backed datasets for data persistence from 
 
 ### 2.1 First Setup
 
-First, start a CloudLab experiment using the ```small-lan``` experiment. Enter ```3``` for the ```Number of Nodes```. Select ```Ubuntu 20.04``` for ```Select OS Image```. Under ```Temporary Filesystem Size``` enter the size of drive in ```GB```. 
+First, start a CloudLab experiment using the ```small-lan``` experiment. Enter ```3``` for the ```Number of Nodes```. Type in ```d820``` for ``` Optional physical node type```. Select ```Ubuntu 20.04``` for ```Select OS Image```. Under ```Temporary Filesystem Size``` enter the size of drive in ```GB```. 
 
 When the experiment is running, go to ```Storage -> Create Datasets```. Select a name that will be memorable with the name of the node appended to the end. For example, ```wss-node0``` is the name of one of our datasets. Under ```Type```, select ```Image backed```. Under ```Instance```, select the running experiment. Under ```Node```, select the node that corresponds to the name of the dataset. For example, ```node0```(name of node in experiment) for ```wss-node0```(name of dataset). Choose permission how you'd prefer and click create. 
 
@@ -50,14 +50,12 @@ Edit this on the CloudLab editor to be,
 
 Choose any name you want and click create.
 
-Now instantiate an experiment with your new profile with the same settings as the 2.1 First Setup.
+Now instantiate an experiment with your new profile with the same settings as the ```2.1 First Setup```.
 
 ***
 
-# 3. Node Setup
+## 3. Further Instructions
 
-For each node, copy the corresponding node folder i.e. node0 if the node is node0, into the ```/mydata/``` directory.
+Now that you have finished the initial profile and experiment setup.
 
-After each node has their corresponding folder downloaded, run the ```main_node_setup.sh``` to perform necessary installations/modifications and updates.
-
-After the ```main_node_setup.py``` has finished, follow the ```SETUP.md``` in the ```/docs``` directory.
+Assuming your new experiment is running, continue by following the ```SETUP.md``` in the ```/docs``` directory.
