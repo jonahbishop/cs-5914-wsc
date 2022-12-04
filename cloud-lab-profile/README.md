@@ -58,4 +58,4 @@ Now instantiate an experiment with your new profile with the same settings as th
 
 Now that you have finished the initial profile and experiment setup.
 
-Assuming your new experiment is running, continue by following the ```SETUP.md``` in the ```/docs``` directory.
+Assuming your new experiment is running, continue by following the ```README.md``` in the ```/docs``` directory.

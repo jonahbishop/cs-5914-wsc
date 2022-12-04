@@ -36,7 +36,7 @@ We used CloudLab.us for the cluster of devices. The cluster consisted of 3 Ubunt
 
 ## 4. Instructions
 
-All of the source code files have been added to this repo. If you would like to replicate this project, we suggest that you use CloudLab.us as it will be closest to the original project and this approach will be the easiest. We have provided instructions for the CloudLab.us approach, see ```SETUP.md``` under the ```/docs``` directory.
+All of the source code files have been added to this repo. If you would like to replicate this project, we suggest that you use CloudLab.us as it will be closest to the original project and this approach will be the easiest. We have provided instructions for the CloudLab.us approach, first follow the ```README.md``` under ```/cloud-lab-profile``` then follow the  ```README.md``` under the ```/docs``` directory.
 
 However, if you decide not to use CloudLab.us you should still be able to replicate this project though this approach will be more difficult. We have not provided instructions for this approach.
 

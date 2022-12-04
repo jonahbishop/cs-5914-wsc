@@ -45,10 +45,9 @@ Clone our repo with,
 
 <b> Step 3: </b>
 
-For each node in your 3 node cluster, copy the ```node().tar.gz``` ,where the ```()``` corresponds to the node number, to the correct node in the ```/mydata``` directory. 
+For each node in your 3 node cluster, copy the ```node().tar.gz``` ,where the ```()``` corresponds to the node number, to the correct node in the ```/mydata``` directory.
 
 For instance, the ```node0.tar.gz``` would be copied to ```node0``` on the cluster in the ```/mydata``` directory.
-
 
 ```Note:``` It is recommended that you choose a single node to have the cloned repo and use ```scp``` to copy the files to the correct location on the other nodes.
 
@@ -64,7 +63,7 @@ Move the contents to your directory and delete the other directory with these co
 
 ```cp -R ./mydata/ ./```
 
-```rm -drf ./mydata ```
+```rm -drf ./mydata```
 
 ```Note:``` You are NOT removing the ```/mydata``` directory that you created. You are removing the ```/mydata``` directory that came from the ```.tar.gz```
 
@@ -116,7 +115,43 @@ Install remaining dependencies.
 
 On your ```node0```
 
+Add dependencies to ```~/.bashrc```
+
+Edit the ```~/.bashrc``` and add the following lines.
+
+```export xx```
+```export xx```
+
+Now do the following command,
+
+```source ~/.bashrc```
+
+<b> Step 12: </b>
+
+Start HDFS,
+
+First format the namenode directory with,
+
+```/mydata/hadoop/bin/hdfs namenode -format```
+
+Now start HDFS and YARN with the following commands,
+
+```/mydata/hadoop/sbin/start-dfs.sh```
+
+```/mydata/hadoop/sbin/start-yarn.sh```
+
+<b> Step 13: </b>
+
+Start Spark with the follwing command,
+
+```/mydata/spark/sbin/start-all.sh```
 
 ## 4. Starting the Experiment
 
+To train the models do,
+
+```some command here```
+
 ## 5. Conclusion
+
+We tried to thoroughly and comprehensively document the steps we took to setup the environment and train the models. Issues may arise when following our setup or when training the models. We suggest that for Spark or Hadoop related issues that you follow official guidelines.
