@@ -31,9 +31,13 @@ Python: 3.8.10
 
 <b> Step 1: </b>
 
+***
+
 On your nodes create a ```/mydata``` directory.
 
 <b> Step 2: </b>
+
+***
 
 On your nodes create a directory with a name of your choice.
 
@@ -45,6 +49,8 @@ Clone our repo with,
 
 <b> Step 3: </b>
 
+***
+
 For each node in your 3 node cluster, copy the ```node().tar.gz``` ,where the ```()``` corresponds to the node number, to the correct node in the ```/mydata``` directory.
 
 For instance, the ```node0.tar.gz``` would be copied to ```node0``` on the cluster in the ```/mydata``` directory.
@@ -53,11 +59,15 @@ For instance, the ```node0.tar.gz``` would be copied to ```node0``` on the clust
 
 <b> Step 4: </b>
 
+***
+
 Now unpack the ```.tar.gz``` that you copied to your nodes with,
 
 ```tar -zxvf <name_of_file>```
 
 <b> Step 5: </b>
+
+***
 
 Move the contents to your directory and delete the other directory with these commands.
 
@@ -69,11 +79,15 @@ Move the contents to your directory and delete the other directory with these co
 
 <b> Step 6: </b>
 
+***
+
 On each node
 
 Edit the ```main_node_setup.sh```, edit the ```Count52``` to be the name of your CloudLab user. Then edit the ```VTCS-5914``` group to be the name of your CloudLab group/project.
 
 <b> Step 7: </b>
+
+***
 
 On each node
 
@@ -82,6 +96,8 @@ Run the ```main_node_setup.sh``` with,
 ```bash main_node_setup.sh```
 
 <b> Step 8: </b>
+
+***
 
 On each node
 
@@ -95,6 +111,8 @@ Remove the ```namenode/``` and the ```datanode/``` directories in the ```/mydata
 
 <b> Step 9: </b>
 
+***
+
 On each node
 
 Re-create the ```namenode/``` and the ```datanode/``` directories in the ```/mydata``` directory.
@@ -105,6 +123,8 @@ Re-create the ```namenode/``` and the ```datanode/``` directories in the ```/myd
 
 <b> Step 10: </b>
 
+***
+
 On your ```node0```
 
 Install remaining dependencies.
@@ -112,6 +132,8 @@ Install remaining dependencies.
 ```pip install jupyter==1.0.0 pyspark==3.3.0 numpy notebook pyarrow findspark```
 
 <b> Step 11: </b>
+
+***
 
 On your ```node0```
 
@@ -128,6 +150,8 @@ Now do the following command,
 
 <b> Step 12: </b>
 
+***
+
 Start HDFS,
 
 First format the namenode directory with,
@@ -142,15 +166,21 @@ Now start HDFS and YARN with the following commands,
 
 <b> Step 13: </b>
 
+***
+
 Start Spark with the follwing command,
 
 ```/mydata/spark/sbin/start-all.sh```
+
+***
 
 ## 4. Starting the Experiment
 
 To train the models do,
 
 ```some command here```
+
+***
 
 ## 5. Conclusion
 
