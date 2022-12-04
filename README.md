@@ -30,7 +30,7 @@ After the models we trained, we evaluated the models with F1 score.
 
 ## 3. Project Setup
 
-We used CloudLab.us for the cluster of devices. The cluster consisted of 3 Ubuntu 20.04 nodes connected in a small lan topology. We used our own profile to instantiate the experiment so that we could have data persistence across our experiments. The profile is under the ```/cloud-lab-profile``` directory. For the specific versions and dependencies, see ```SETUP.md``` under the ```/docs``` directory.
+We used CloudLab.us for the cluster of devices. The cluster consisted of 3 Ubuntu 20.04 nodes connected in a small lan topology. We used our own profile to instantiate the experiment so that we could have data persistence across our experiments. The profile is under the ```/cloud-lab-profile``` directory. For the specific versions and dependencies, see ```README.md``` under the ```/docs``` directory and ```requirements.txt```.
 
 ***
 
