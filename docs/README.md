@@ -129,7 +129,7 @@ On your ```node0```
 
 Install remaining dependencies.
 
-```pip install jupyter==1.0.0 pyspark==3.3.0 numpy notebook pyarrow findspark```
+```pip install -r requirements.txt```
 
 ***
 
@@ -176,9 +176,19 @@ Start Spark with the follwing command,
 
 ## 4. Starting the Experiment
 
-To train the models do,
+# 4a. Preparing the Data
+The first step starting the experiment is cleaning all of the data. To clean the airline data, execute all the cells of clean.ipynb located in the cs-5914-wsc/flight-delay-model/data/ directory. You will have to do repeat this for each of the files in the dirty data folder so each month. The only thing you should have to change is the variable filename. The purpose of clean.ipynb is to remove any extraneous data so the combined file of each of the months is not very large. 
 
-```some command here```
+Once you have cleaned the airline data, each of the months new csv files will be in a folder called "less dirty". Now, using combining_csv.ipynb located in the same spot of as the clean.ipynb file, execute all the cells. This will combine all of the cleaned csv files into one big csv file called full.csv.
+
+Now, you need to clean the weather data to prepare to merge with the airline data. For this step, simply run clean_weather.ipynb andit should create a csv in /data/clean.
+
+Next, you must perform the feature engineering using the file preprocessing.ipynb located in the same directory as the others. Follow the instructions in this file for running this file. You will have to run it two times. The first time it will create a file in the clean directory called clean_merge_full.csv which ccontains all the airline data with new features joined with the weather data by date. The second time you run this, you want to change the file name to clean_full.csv and make sure it is the airline data not joined with the weather data.
+
+Finally, you are ready to train the models. 
+
+# 4b. Training the Models
+The hard part was cleaning the data. All you have to do is run all the cells in models.ipynb located in cs-5914-wsc/flight-delay-model/. Depending on the specs of your machine, you may have to adjust the memory given to the spark app. On the cluster we used, it took approximately 3-4 hours.
 
 ***
 
