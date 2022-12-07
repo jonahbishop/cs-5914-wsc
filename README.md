@@ -51,4 +51,4 @@ We evaluated the models and found that weather data did not have a significant i
 
 ## 6. Limitations
 
-We only used five US airports for the training. The weather data we used is in the form of a daily summary. 
+We only used five US airports for the training. The weather data we used is in the form of a daily summary. Both datasets were also onyl from the year 2019.
